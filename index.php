@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 require_once("config.php");
 
@@ -17,10 +17,22 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega usuário usando login e a senha
+//$usuario = new Usuario();
+//$usuario->login("root","1234586");
+//echo $usuario;
+
+//Criando um novo usuário
+/*
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+$aluno->insert();
+echo $aluno;
+*/
 
 $usuario = new Usuario();
-$usuario->login("root","1234586");
+$usuario->loadById(10);
+$usuario->update("professor","!@#$%¨&*");
 echo $usuario;
-
 
 ?>
